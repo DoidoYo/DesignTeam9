@@ -1,0 +1,240 @@
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\ApplicationInsights.config
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\TacPac WebApp.dll.config
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\TacPac WebApp.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\TacPac WebApp.pdb
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Antlr3.Runtime.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\EntityFramework.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\EntityFramework.SqlServer.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.DependencyCollector.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.Web.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.WindowsServer.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.ApplicationInsights.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Google.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Web.Infrastructure.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Newtonsoft.Json.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Owin.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Net.Http.Formatting.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Helpers.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.Owin.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.WebHost.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Mvc.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Optimization.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Razor.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Deployment.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Razor.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\WebGrease.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.DependencyCollector.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.Web.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.WindowsServer.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.ApplicationInsights.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Newtonsoft.Json.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Net.Http.Formatting.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Helpers.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.WebHost.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Mvc.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Optimization.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Razor.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Deployment.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Razor.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Antlr3.Runtime.pdb
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\EntityFramework.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\EntityFramework.SqlServer.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Google.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.Owin.xml
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\obj\Release\TacPac WebApp.csprojResolveAssemblyReference.cache
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\obj\Release\TacPac WebApp.dll
+Y:\Github\TacPac Application\TacPac WebApp\TacPac WebApp\obj\Release\TacPac WebApp.pdb
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\ApplicationInsights.config
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\TacPac WebApp.dll.config
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\TacPac WebApp.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\TacPac WebApp.pdb
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Antlr3.Runtime.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\EntityFramework.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Google.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Newtonsoft.Json.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Owin.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Net.Http.Formatting.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Helpers.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.Owin.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.WebHost.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Mvc.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Optimization.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Razor.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Deployment.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Razor.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\WebGrease.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.ApplicationInsights.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Newtonsoft.Json.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Net.Http.Formatting.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Helpers.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.WebHost.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Mvc.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Optimization.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Razor.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Deployment.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Razor.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Antlr3.Runtime.pdb
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\EntityFramework.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Google.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.Owin.xml
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\obj\Release\TacPac WebApp.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\obj\Release\TacPac WebApp.dll
+\\Mac\Home\Documents\Github\TacPac Application\TacPac WebApp\TacPac WebApp\obj\Release\TacPac WebApp.pdb
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ApplicationInsights.config
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\TacPac WebApp.dll.config
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\TacPac WebApp.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\TacPac WebApp.pdb
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.Common.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.Dns.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.Groupware.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.Imap4.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.Mail.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.Nntp.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.OpenPGP.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.Pop3.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.Smtp.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\ActiveUp.Net.WhoIs.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Antlr3.Runtime.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\EntityFramework.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Google.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\MySql.Data.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\MySql.Data.Entity.EF6.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Newtonsoft.Json.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Owin.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Net.Http.Formatting.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Helpers.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.Owin.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.WebHost.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Mvc.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Optimization.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Razor.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Deployment.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Razor.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\WebGrease.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.ApplicationInsights.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Newtonsoft.Json.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Net.Http.Formatting.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Helpers.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.WebHost.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Mvc.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Optimization.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Razor.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Deployment.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.WebPages.Razor.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Antlr3.Runtime.pdb
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\EntityFramework.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Google.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\bin\System.Web.Http.Owin.xml
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\obj\Release\TacPac WebApp.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\obj\Release\TacPac WebApp.dll
+\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\obj\Release\TacPac WebApp.pdb

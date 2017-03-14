@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^\\\\Mac\\Home\\Documents\\Git\\DT-9\\TacPac\ WebApp\\TacPac\ WebApp\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^\\\\Mac\\Home\\Documents\\Git\\DT-9\\TacPac\ WebApp\\TacPac\ WebApp\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="server=localhost;port=3306;database=tacpacdb;uid=user1;password=password" tags="">
+    <parameterEntry kind="XmlFile" scope="\\\\Mac\\Home\\Documents\\Git\\DT-9\\TacPac\ WebApp\\TacPac\ WebApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="GroupmeConnection-Web.config Connection String" description="" value="server=localhost;port=3306;database=groupmedb;uid=user1;password=password" tags="">
+    <parameterEntry kind="XmlFile" scope="\\\\Mac\\Home\\Documents\\Git\\DT-9\\TacPac\ WebApp\\TacPac\ WebApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GroupmeConnection']/@connectionString" />
+  </parameter>
+</parameters>
