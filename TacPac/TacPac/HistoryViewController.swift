@@ -30,10 +30,18 @@ class HistoryViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        barView.xAxis.enabled = false
+        barView.legend.enabled = false
+        barView.leftAxis.enabled = false
+        barView.rightAxis.enabled = false
+        barView.chartDescription?.text = ""
+        barView.highlightPerTapEnabled = false
+        barView.highlightPerDragEnabled = false
+        
         TacPacServer.getMeasurements(amount: 7, completion: {
             measurements, error in
             
-            print("Data Acquired!")
+            //print("Data Acquired!")
             
             if let err = error {
                 print(err)

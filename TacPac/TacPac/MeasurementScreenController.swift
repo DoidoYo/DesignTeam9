@@ -52,8 +52,12 @@ class MeasurementViewController: ViewController {
             
         })
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        
+        self.hideKeyboardWhenTappedAround()
     }
     
     
