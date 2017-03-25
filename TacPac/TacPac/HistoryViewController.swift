@@ -11,20 +11,37 @@ import UIKit
 import Charts
 import RealmSwift
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var segmentedButtons: UISegmentedControl!
     
     @IBOutlet weak var barView: BarChartView!
     
-    @IBAction func exportButtonPress(_ sender: Any) {
-        
-    }
+    @IBOutlet weak var tableView: UITableView!
     
     var measurements : [TacMeasurement] = [TacMeasurement]()
     
+    @IBAction func exportButtonPress(_ sender: UIButton) {
+        
+    }
+    @IBAction func segmentedButtonPress(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            barView.isHidden = false
+            tableView.isHidden = true
+        } else {
+            barView.isHidden = true
+            tableView.isHidden = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.isHidden = true
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,15 +64,26 @@ class HistoryViewController: UIViewController {
                 print(err)
             }
             
+            
+            //NOPE
             if let mea = measurements {
-                self.measurements = mea
-                if self.measurements.count > 0 {
-                    self.updateChartWithData()
+                
+                for i in mea {
+                    if !self.measurements.contains(i) {
+                        self.measurements.append(i)
+                    }
                 }
+                
+                self.updateChartWithData()
+                self.tableView.reloadData()
             }
             
             
         })
+    }
+    
+    @IBAction func unwindToHistory(sender: UIStoryboardSegue)
+    {
     }
     
     func updateChartWithData() {
@@ -69,6 +97,23 @@ class HistoryViewController: UIViewController {
         let chartData = LineChartData(dataSet: chartDataSet)
         barView.data = chartData
         barView.animate(yAxisDuration: 0.1)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return measurements.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        
+        cell.textLabel?.text = String(measurements[measurements.count - 1 - indexPath.row].concentration) + " ng/L"
+        cell.detailTextLabel?.text = measurements[measurements.count - 1 - indexPath.row].time
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
     
 }

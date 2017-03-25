@@ -27,9 +27,11 @@ class CustomTabBarItem: UIView {
     
     func setup(item: UITabBarItem) {
         
-        guard let image = item.image else {
+        guard var image = item.image else {
             fatalError("add images to tabbar items")
         }
+        
+        image = resizeImage(image: image, newWidth: CGFloat(27))!
         
         // create imageView centered within a container
         iconView = UIImageView(frame: CGRect(x: (self.frame.width-image.size.width)/2, y: (self.frame.height-image.size
@@ -40,6 +42,19 @@ class CustomTabBarItem: UIView {
         iconView.tintColor = UIColor.black
         
         self.addSubview(iconView)
+    }
+    
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage? {
+        
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
     }
     
 }

@@ -15,8 +15,9 @@ class LoginViewController: ViewController, UITextFieldDelegate {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var lastSelectedTextField:UITextField?
+    var activeField:UITextField?
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBAction func loginButton(_ sender: Any) {
         
         //error correction
@@ -48,59 +49,71 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         } else {
             print("Invalid input")
         }
-        
+    }
+    
+    @IBAction func unwindToLogin(sender: UIStoryboardSegue)
+    {
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        hideKeyboardWhenTappedAround()
+        
+        registerForKeyboardNotifications()
         
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         
     }
     
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        lastSelectedTextField = textField
-        
-        return true
+    func registerForKeyboardNotifications(){
+        //Adding notifies on keyboard appearing
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWillShow(notification: NSNotification) {
-        
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            
-            var fieldLocation = lastSelectedTextField!.frame.origin.y + lastSelectedTextField!.frame.height
-            
-            var kLocation = self.view.frame.height - keyboardSize.height
-            
-            print("field - \(fieldLocation) ---- keyboard \(kLocation)")
-            
-            self.view.frame.origin.y = 0
-            
-            if fieldLocation > kLocation {
-                print("Moving!")
-                self.view.frame.origin.y -= fieldLocation - kLocation + lastSelectedTextField!.frame.height
-            }
-            
-        }
-        
+    func deregisterFromKeyboardNotifications(){
+        //Removing notifies on keyboard appearing
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            print(self.view.frame.origin)
-            if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y = 0
+    func keyboardWasShown(notification: NSNotification){
+        //Need to calculate keyboard exact size due to Apple suggestions
+        self.scrollView.isScrollEnabled = true
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
+        
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        
+        var aRect : CGRect = self.view.frame
+        aRect.size.height -= keyboardSize!.height
+        if let activeField = self.activeField {
+            if (!aRect.contains(activeField.frame.origin)){
+                self.scrollView.scrollRectToVisible(activeField.frame, animated: true)
             }
         }
     }
- 
-    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
-        
+    
+    func keyboardWillBeHidden(notification: NSNotification){
+        //Once keyboard disappears, restore original positions
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height, 0.0)
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        self.view.endEditing(true)
+        self.scrollView.isScrollEnabled = false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        activeField = nil
     }
 }

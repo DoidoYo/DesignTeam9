@@ -30,20 +30,19 @@ class CustomTabBar: UITabBar {
     
     @IBInspectable var selectedColor : UIColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        self.backgroundColor = UIColor.brown
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     func setup(startingIndex: Int) {
-        // get tab bar items from default tab bar
-        tabBarItems = self.items
         
+        //remove default from view
+        for i in self.subviews {
+            i.removeFromSuperview()
+        }
+        
+        // get tab bar items from default tab bar
+        tabBarItems = items
         
         customTabBarItems = []
         tabBarButtons = []
@@ -59,9 +58,6 @@ class CustomTabBar: UITabBar {
         createTabBarItemSelectionOverlay(containers: containers)
         createTabBarItemSelectionOverlayMask(containers: containers)
         createTabBarItems(containers: containers)
-        
-        tabBarItems[0].image = nil
-        
     }
     
     func createTabBarItemSelectionOverlay(containers: [CGRect]) {

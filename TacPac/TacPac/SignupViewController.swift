@@ -17,7 +17,8 @@ class SignupViewController: ViewController, UITextFieldDelegate {
     @IBOutlet weak var lastnameTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
     
-    var lastSelectedTextField: UITextField?
+    @IBOutlet weak var scrollView: UIScrollView!
+    var activeField: UITextField?
     
     @IBAction func birthdayStartEditing(_ sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
@@ -32,6 +33,8 @@ class SignupViewController: ViewController, UITextFieldDelegate {
     @IBAction func backButtonPress(_ sender: Any) {
         
     }
+    
+    
     @IBAction func signupButton(_ sender: Any) {
         TacPacServer.signup(username: emailTextField.text!, password: passwordTextField.text!, firstName: firstnameTextField.text!, lastName: lastnameTextField.text!, birthday: birthdayTextField.text!, completion: {
             httpCode, msg in
@@ -51,8 +54,7 @@ class SignupViewController: ViewController, UITextFieldDelegate {
         
         self.hideKeyboardWhenTappedAround()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        registerForKeyboardNotifications()
         
         
         emailTextField.delegate = self
@@ -62,47 +64,61 @@ class SignupViewController: ViewController, UITextFieldDelegate {
         birthdayTextField.delegate = self
     }
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        lastSelectedTextField = textField
-        
-        return true
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            
-            var fieldLocation = lastSelectedTextField!.frame.origin.y + lastSelectedTextField!.frame.height
-            
-            var kLocation = self.view.frame.height - keyboardSize.height
-            
-            print("field - \(fieldLocation) ---- keyboard \(kLocation)")
-            
-            self.view.frame.origin.y = 0
-            
-            if fieldLocation > kLocation {
-                print("Moving!")
-                self.view.frame.origin.y -= fieldLocation - kLocation + lastSelectedTextField!.frame.height
-            }
-            
-        }
-        
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            print(self.view.frame.origin)
-            if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y = 0
-            }
-        }
-    }
-    
     func datePickerValueChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
         birthdayTextField.text = dateFormatter.string(from: sender.date)
+    }
+    
+    func registerForKeyboardNotifications(){
+        //Adding notifies on keyboard appearing
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func deregisterFromKeyboardNotifications(){
+        //Removing notifies on keyboard appearing
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func keyboardWasShown(notification: NSNotification){
+        //Need to calculate keyboard exact size due to Apple suggestions
+        self.scrollView.isScrollEnabled = true
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
+        
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        
+        var aRect : CGRect = self.view.frame
+        aRect.size.height -= keyboardSize!.height
+        if let activeField = self.activeField {
+            if (!aRect.contains(activeField.frame.origin)){
+                self.scrollView.scrollRectToVisible(activeField.frame, animated: true)
+            }
+        }
+    }
+    
+    func keyboardWillBeHidden(notification: NSNotification){
+        //Once keyboard disappears, restore original positions
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height, 0.0)
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        self.view.endEditing(true)
+        self.scrollView.isScrollEnabled = false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        activeField = nil
     }
     
 }

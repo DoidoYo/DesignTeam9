@@ -8,14 +8,24 @@
 
 import Foundation
 
-class TacMeasurement : JSONSerializable {
+class TacMeasurement : JSONSerializable, Equatable {
     
+    var id: Int?
     var concentration:Double
     var time: String
     
     init(concentration: Double, time:String) {
         self.concentration = concentration
         self.time = time
+    }
+    
+    static func ==(lhs: TacMeasurement, rhs: TacMeasurement) -> Bool {
+        if let lid = lhs.id, let rid = rhs.id {
+            if lid == rid {
+               return true
+            }
+        }
+        return false
     }
 }
 

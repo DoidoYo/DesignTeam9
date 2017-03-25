@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 //set information
                 TacPacServer.token = token
-                print(token)
             } else {
                 //instantiate controller
                 let story = UIStoryboard(name: "Main", bundle: nil)

@@ -12,6 +12,8 @@ class CustomTabBarViewController: UITabBarController, CustomTabBarDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         self.selectedIndex = 1
         self.delegate = self
         
@@ -19,6 +21,7 @@ class CustomTabBarViewController: UITabBarController, CustomTabBarDelegate, UITa
         
         customTabBar.cDelegate = self
         customTabBar.setup(startingIndex: self.selectedIndex)
+        
     }
     
     // MARK: - CustomTabBarDelegate

@@ -122,7 +122,9 @@ class TacPacServer: NSObject {
                         let concentration = item["concentration"] as! Double
                         let time = item["time"] as! String
                         
-                        mArray.append(TacMeasurement(concentration: concentration, time: time))
+                        let measure = TacMeasurement(concentration: concentration, time: time)
+                        measure.id = item["id"] as! Int
+                        mArray.append(measure)
                     }
                     
                     completion(mArray, nil)
