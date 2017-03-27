@@ -28,7 +28,7 @@ class CustomTabBar: UITabBar {
     var tabBarItemWidth: CGFloat!
     var selectedMask: UIView!
     
-    @IBInspectable var selectedColor : UIColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+    @IBInspectable var selectedColor : UIColor = #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

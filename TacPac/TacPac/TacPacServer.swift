@@ -109,8 +109,8 @@ class TacPacServer: NSObject {
     static func getMeasurements(amount: Int, completion: @escaping (_ measurements: [TacMeasurement]?, _ error: String?) -> Void ) {
         POSTrequest(place: "api/Tacpac/getPastMeasurement", body: "\(amount)", completion: {
             httpCode, data in
-          
-//            print(String(data:data, encoding: .utf8))
+            
+            //            print(String(data:data, encoding: .utf8))
             
             if httpCode == 200 {
                 do{
@@ -134,6 +134,20 @@ class TacPacServer: NSObject {
                 }
             } else {
                 completion(nil, String(data:data, encoding: .utf8))
+            }
+            
+        })
+    }
+    
+    static func export(email:String, completion: @escaping (_ error: String?) -> Void) {
+        POSTrequest(place: "api/Tacpac/sendEmail", body: "\"\(email)\"", completion: {
+            httpCode, data in
+            
+            if httpCode == 200 {
+                completion(nil)
+            } else {
+                print(httpCode)
+                completion("Error Occured")
             }
             
         })

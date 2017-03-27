@@ -80,7 +80,7 @@ namespace TacPac_WebApp.Controllers
 
         [HttpPost]
         [Route("sendEmail")]
-        public String sendEmail([FromBody]String recepients)
+        public string sendEmail([FromBody]string recepients)
         {
             //var client = new SmtpClient("smtp.gmail.com", 587)
             //{
@@ -96,22 +96,34 @@ namespace TacPac_WebApp.Controllers
 
             /* Set From, To, Subject, Body of the email */
             mail.From = new MailAddress("UaBitch@Bitch.you");
-            mail.To.Add("gabrielblfernandes@gmail.com");
+            mail.To.Add(recepients);
             mail.Subject = "Test Mail - SmtpClientEmail";
-            mail.Body = "This is for testing SMTP mail from SmtpClientEmail";
+
+            var sub = "<table><tr><th>id</th><th>date</th><th>measurement</th></tr>";
+
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            using (var db = new ApplicationDbContext())
+            {
+                var patient = db.Patients.Find(user.Id);
+
+                foreach (var i in patient.measurements)
+                {
+                    sub += "<tr><td>" + i.id + "</td><td>" + i.time + "</td><td>" + i.concentration + "</td></tr>";
+                }
+            }
+
+            sub += "</table>";
+
+            mail.IsBodyHtml = true;
+                mail.Body = sub;
 
             /*Specify SMTPClient info - smtpserver, port, credentials, EnableSSL - if it needs SSL */
             SmtpClient smtpServer = new SmtpClient("smtp.gmail.com", 587);
+            smtpServer.UseDefaultCredentials = false;
             smtpServer.Port = 587;
             smtpServer.Credentials = new System.Net.NetworkCredential("gabrielblfernandes@gmail.com", "doctorG123!");
             smtpServer.EnableSsl = true;
-
-            
-
-            /* Certificate Validation */
-            ServicePointManager.ServerCertificateValidationCallback =
-                            delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
-                            { return true; };
+      
 
             /*Now you can send the email*/
             smtpServer.Send(mail);

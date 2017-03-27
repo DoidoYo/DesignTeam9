@@ -23,6 +23,7 @@
 		BD922F091E78DC8B00084A90 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD922F051E78DC8B00084A90 /* CustomTabBar.swift */; };
 		BD922F0A1E78DC8B00084A90 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD922F061E78DC8B00084A90 /* CustomTabBarController.swift */; };
 		BD922F0B1E78DC8B00084A90 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD922F071E78DC8B00084A90 /* CustomTabBarItem.swift */; };
+		BDA9B5581E86212100CA5E32 /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9B5571E86212100CA5E32 /* ExportViewController.swift */; };
 		BDABE59C1E60FB2F00499D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDABE59B1E60FB2F00499D19 /* Assets.xcassets */; };
 		BDD790331E5E1404005263FB /* TacPacServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD790321E5E1404005263FB /* TacPacServer.swift */; };
 		BDD790371E5E27B0005263FB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD790361E5E27B0005263FB /* SignupViewController.swift */; };
@@ -75,6 +76,7 @@
 		BD922F051E78DC8B00084A90 /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		BD922F061E78DC8B00084A90 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		BD922F071E78DC8B00084A90 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
+		BDA9B5571E86212100CA5E32 /* ExportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
 		BDABE59B1E60FB2F00499D19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD790321E5E1404005263FB /* TacPacServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TacPacServer.swift; sourceTree = "<group>"; };
 		BDD790361E5E27B0005263FB /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				BDD790381E5E2AC0005263FB /* TempViewController.swift */,
 				BD07524B1E71C8D800C616CB /* MeasurementScreenController.swift */,
 				BD3CF43E1E71D743009512D8 /* HistoryViewController.swift */,
+				BDA9B5571E86212100CA5E32 /* ExportViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				BD922F0A1E78DC8B00084A90 /* CustomTabBarController.swift in Sources */,
 				BD21849B1E57BAFB00E0FF61 /* AppDelegate.swift in Sources */,
 				BD2184A31E57BAFB00E0FF61 /* TacPac.xcdatamodeld in Sources */,
+				BDA9B5581E86212100CA5E32 /* ExportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

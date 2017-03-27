@@ -74,8 +74,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
                     }
                 }
                 
-                self.updateChartWithData()
-                self.tableView.reloadData()
+                if (mea.count > 0) {
+                    self.updateChartWithData()
+                    self.tableView.reloadData()
+                }
             }
             
             

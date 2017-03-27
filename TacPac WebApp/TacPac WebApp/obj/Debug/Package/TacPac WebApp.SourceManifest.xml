@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\obj\Debug\Package\PackageTmp" />
-  <setAcl path="\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="\\Mac\Home\Documents\Git\DT-9\TacPac WebApp\TacPac WebApp\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="\\Mac\Home\Documents\Git\DesignTeam9\TacPac WebApp\TacPac WebApp\obj\Debug\Package\PackageTmp" />
+  <setAcl path="\\Mac\Home\Documents\Git\DesignTeam9\TacPac WebApp\TacPac WebApp\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="\\Mac\Home\Documents\Git\DesignTeam9\TacPac WebApp\TacPac WebApp\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>
