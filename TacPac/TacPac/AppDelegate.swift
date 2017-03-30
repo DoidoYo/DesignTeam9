@@ -24,6 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 //set information
                 TacPacServer.token = token
+                
+                TacPacServer.checkToken(completion: {
+                    live in
+                    
+                    if (!live) {
+                        //instantiate controller
+                        let story = UIStoryboard(name: "Main", bundle: nil)
+                        let vs = story.instantiateViewController(withIdentifier: "LoginScreen")
+                        
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        appDelegate.window?.rootViewController = vs
+                    }
+                    
+                })
+                
+                
             } else {
                 //instantiate controller
                 let story = UIStoryboard(name: "Main", bundle: nil)

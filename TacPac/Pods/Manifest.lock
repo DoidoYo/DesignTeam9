@@ -3,6 +3,7 @@ PODS:
   - Charts/Realm (3.0.1):
     - Charts/Core
     - RealmSwift (~> 1.1)
+  - NVActivityIndicatorView (3.5.1)
   - Realm (1.1.0):
     - Realm/Headers (= 1.1.0)
   - Realm/Headers (1.1.0)
@@ -12,14 +13,16 @@ PODS:
 
 DEPENDENCIES:
   - Charts/Realm
+  - NVActivityIndicatorView
   - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
+  NVActivityIndicatorView: 075563b3547445ebcff840e3297ce9dd4a23731f
   Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
   RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: 32d1321ec237ebc154cea21db8ab5b78f625e62c
+PODFILE CHECKSUM: 0077d5c56c9b7d1a5f4b44193f30f1a743bbeaa2
 
 COCOAPODS: 1.2.0

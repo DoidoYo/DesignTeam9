@@ -29,6 +29,7 @@ class CustomTabBar: UITabBar {
     var selectedMask: UIView!
     
     @IBInspectable var selectedColor : UIColor = #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)
+    @IBInspectable var backgroundColor2 : UIColor = #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -40,6 +41,9 @@ class CustomTabBar: UITabBar {
         for i in self.subviews {
             i.removeFromSuperview()
         }
+        
+        self.layer.borderColor = UIColor.clear.cgColor
+        self.clipsToBounds = true
         
         // get tab bar items from default tab bar
         tabBarItems = items
@@ -68,7 +72,7 @@ class CustomTabBar: UITabBar {
             let view = UIView(frame: container)
             
             let selectedItemOverlay = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
-            selectedItemOverlay.backgroundColor = self.backgroundColor
+            selectedItemOverlay.backgroundColor = self.backgroundColor2
             view.addSubview(selectedItemOverlay)
             
             self.addSubview(view)

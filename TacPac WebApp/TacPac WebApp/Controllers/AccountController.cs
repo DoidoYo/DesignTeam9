@@ -67,6 +67,12 @@ namespace TacPac_WebApp.Controllers
             };
         }
 
+        [Route("checkToken")]
+        public bool checkToken()
+        {
+            return true;
+        }
+
         // POST api/Account/Logout
         [Route("Logout")]
         public IHttpActionResult Logout()

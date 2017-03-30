@@ -117,6 +117,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.hidesBottomBarWhenPushed = true
+    }
     
 }
 

@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import NVActivityIndicatorView
 
-class ExportViewController: UIViewController {
+class ExportViewController: UIViewController, NVActivityIndicatorViewable {
     
     
     @IBOutlet weak var navItem: UINavigationItem!
@@ -20,17 +21,24 @@ class ExportViewController: UIViewController {
     }
     
     func sendTapped() {
+        startAnimating(CGSize(width: 40, height: 40), message: "Sending Data", type: NVActivityIndicatorType(rawValue: 8)!)
+        emailTextField.resignFirstResponder()
+        
         TacPacServer.export(email: emailTextField.text!, completion: {
             err in
             DispatchQueue.main.async {
+                self.stopAnimating()
+                self.emailTextField.text = ""
                 if let e = err {
-                    
+                    self.emailTextField.becomeFirstResponder()
                     let alert = UIAlertController(title: "Error", message: e, preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                     
+                    return
+                    
                 }
-                self.emailTextField.text = ""
+                self.navigationController?.popViewController(animated: true)
             }
         })
     }

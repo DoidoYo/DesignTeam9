@@ -153,6 +153,28 @@ class TacPacServer: NSObject {
         })
     }
     
+    static func checkToken(completion: @escaping (_ error: Bool) -> Void) -> Void{
+        
+        POSTrequest(place: "api/Account/checkToken", body: "", completion: {
+            (httpCode, data) in
+            
+            if httpCode == 200 {
+                let msg = String(data:data, encoding: .utf8)
+                if (msg?.contains("denied"))! {
+                    completion(false)
+                    return
+                } else {
+                    completion(true)
+                }
+            } else {
+                completion(false)
+            }
+            
+        })
+        
+    }
+    
+    
     static func POSTrequest(place:String, body: String, completion: @escaping (_ httpCode: Int, _ data:Data) -> Void) {
         var request = URLRequest(url: URL(string: urlBase + place)!)
         request.httpMethod = "POST"

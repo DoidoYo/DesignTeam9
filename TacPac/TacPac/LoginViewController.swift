@@ -8,8 +8,9 @@
 
 import Foundation
 import SwiftKeychainWrapper
+import NVActivityIndicatorView
 
-class LoginViewController: ViewController, UITextFieldDelegate {
+class LoginViewController: ViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
     
     @IBOutlet weak var usernameTextField: UITextField!
     
@@ -25,10 +26,14 @@ class LoginViewController: ViewController, UITextFieldDelegate {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         if emailTest.evaluate(with: usernameTextField.text!) && !passwordTextField.text!.isEmpty {
             
+            startAnimating(CGSize(width: 40, height: 40), message: "Logging In", type: NVActivityIndicatorType(rawValue: 8)!)
+            
             TacPacServer.login(username: usernameTextField.text!, password: passwordTextField.text!, completionHandler: {
                 (error) in
                 
                 DispatchQueue.main.async {
+                    //stop loading animation
+                    self.stopAnimating()
                     //adds to mainthread queue
                     if error != nil {
                         //creates dialog
