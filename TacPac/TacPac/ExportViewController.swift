@@ -17,11 +17,10 @@ class ExportViewController: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
-        navItem.rightBarButtonItem = UIBarButtonItem(title: "Send", style: .plain, target: self, action: #selector(sendTapped))
+        
     }
     
-    func sendTapped() {
-        startAnimating(CGSize(width: 40, height: 40), message: "Sending Data", type: NVActivityIndicatorType(rawValue: 8)!)
+    @IBAction func sendPressed(_ sender: Any) {startAnimating(CGSize(width: 40, height: 40), message: "Sending Data", type: NVActivityIndicatorType(rawValue: 8)!)
         emailTextField.resignFirstResponder()
         
         TacPacServer.export(email: emailTextField.text!, completion: {

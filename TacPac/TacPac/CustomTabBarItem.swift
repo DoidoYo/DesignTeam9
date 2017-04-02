@@ -31,15 +31,12 @@ class CustomTabBarItem: UIView {
             fatalError("add images to tabbar items")
         }
         
-        image = resizeImage(image: image, newWidth: CGFloat(27))!
-        
         // create imageView centered within a container
         iconView = UIImageView(frame: CGRect(x: (self.frame.width-image.size.width)/2, y: (self.frame.height-image.size
             .height)/2, width: self.frame.width, height: self.frame.height))
         
         iconView.image = image
         iconView.sizeToFit()
-        iconView.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         self.addSubview(iconView)
     }

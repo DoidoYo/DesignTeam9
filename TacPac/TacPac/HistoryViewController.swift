@@ -13,17 +13,12 @@ import RealmSwift
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var segmentedButtons: UISegmentedControl!
-    
     @IBOutlet weak var barView: BarChartView!
     
     @IBOutlet weak var tableView: UITableView!
     
     var measurements : [TacMeasurement] = [TacMeasurement]()
-    
-    @IBAction func exportButtonPress(_ sender: UIButton) {
-        
-    }
+
     @IBAction func segmentedButtonPress(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             barView.isHidden = false

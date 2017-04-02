@@ -31,11 +31,21 @@ class CustomTabBar: UITabBar {
     @IBInspectable var selectedColor : UIColor = #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)
     @IBInspectable var backgroundColor2 : UIColor = #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)
     
+    @IBInspectable var iconColor : UIColor?
+    @IBInspectable var selectedIconColor : UIColor?
+    
+    
+    var tHeight: CGFloat?
+    var itemHeight: CGFloat?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     func setup(startingIndex: Int) {
+        
+        tHeight = self.frame.height + self.frame.height * (1/4)
+        itemHeight = self.frame.height * (1/4)
         
         //remove default from view
         for i in self.subviews {
@@ -62,7 +72,20 @@ class CustomTabBar: UITabBar {
         createTabBarItemSelectionOverlay(containers: containers)
         createTabBarItemSelectionOverlayMask(containers: containers)
         createTabBarItems(containers: containers)
+        
+        //configures colors of icons
+        if iconColor != nil {
+            for var i in customTabBarItems {
+                i.iconView.image = i.iconView.image?.imageWithColor(newColor: iconColor)
+            }
+        }
+        if selectedIconColor != nil {
+            customTabBarItems[startingIndex].iconView.image = customTabBarItems[startingIndex].iconView.image?.imageWithColor(newColor: selectedIconColor)
+        }
     }
+    
+    
+    
     
     func createTabBarItemSelectionOverlay(containers: [CGRect]) {
         
@@ -85,7 +108,7 @@ class CustomTabBar: UITabBar {
         
         selectedMask = UIView(frame: CGRect(x: CGFloat(initialTabBarItemIndex) * tabBarItemWidth, y: 0, width: tabBarItemWidth, height: self.frame.height))
         selectedMask.backgroundColor = selectedColor
-
+        
         self.addSubview(selectedMask)
     }
     
@@ -140,9 +163,19 @@ class CustomTabBar: UITabBar {
         
         self.selectedMask.frame.origin.x = CGFloat(to) * self.tabBarItemWidth
         
-//        UIView.animate(withDuration: slideAnimationDuration , delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
-//            self.selectedMask.frame.origin.x = CGFloat(to) * self.tabBarItemWidth
-//            }, completion: nil)
+        let iconFrom: CustomTabBarItem = customTabBarItems[from]
+        let iconTo: CustomTabBarItem = customTabBarItems[to]
+        
+        if selectedIconColor != nil {
+            iconTo.iconView.image = iconTo.iconView.image?.imageWithColor(newColor: selectedIconColor)
+        }
+        if iconColor != nil {
+            iconFrom.iconView.image = iconFrom.iconView.image?.imageWithColor(newColor: iconColor)
+        }
+        
+        //        UIView.animate(withDuration: slideAnimationDuration , delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        //            self.selectedMask.frame.origin.x = CGFloat(to) * self.tabBarItemWidth
+        //            }, completion: nil)
         
     }
     
@@ -152,5 +185,42 @@ class CustomTabBar: UITabBar {
         animateTabBarSelection(from: selectedTabBarItemIndex, to: index)
         selectedTabBarItemIndex = index
         cDelegate.didSelectViewController(tabBarView: self, atIndex: index)
+    }
+}
+extension UIImage {
+    
+    convenience init?(imageName: String) {
+        self.init(named: imageName)!
+        accessibilityIdentifier = imageName
+    }
+    
+    // http://stackoverflow.com/a/40177870/4488252
+    func imageWithColor (newColor: UIColor?) -> UIImage? {
+        
+        if let newColor = newColor {
+            UIGraphicsBeginImageContextWithOptions(size, false, scale)
+            
+            let context = UIGraphicsGetCurrentContext()!
+            context.translateBy(x: 0, y: size.height)
+            context.scaleBy(x: 1.0, y: -1.0)
+            context.setBlendMode(.normal)
+            
+            let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+            context.clip(to: rect, mask: cgImage!)
+            
+            newColor.setFill()
+            context.fill(rect)
+            
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            newImage.accessibilityIdentifier = accessibilityIdentifier
+            return newImage
+        }
+        
+        if let accessibilityIdentifier = accessibilityIdentifier {
+            return UIImage(imageName: accessibilityIdentifier)
+        }
+        
+        return self
     }
 }

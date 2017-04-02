@@ -30,9 +30,6 @@ class SignupViewController: ViewController, UITextFieldDelegate {
         datePickerView.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
         
     }
-    @IBAction func backButtonPress(_ sender: Any) {
-        
-    }
     
     
     @IBAction func signupButton(_ sender: Any) {
@@ -47,7 +44,6 @@ class SignupViewController: ViewController, UITextFieldDelegate {
             
         })
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

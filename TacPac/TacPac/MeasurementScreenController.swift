@@ -16,9 +16,10 @@ class MeasurementViewController: ViewController, NVActivityIndicatorViewable {
     
     @IBOutlet var mainView: UIView!
     
-    @IBAction func uploadButtonPress(_ sender: Any) {
-        self.measurementTextField.resignFirstResponder()
+    @IBAction func saveButtonPress(_ sender: Any) {
         if let text = measurementTextField.text, text != "" {
+            
+            self.measurementTextField.resignFirstResponder()
             
             let date = Date()
             let formatter = DateFormatter()
@@ -40,6 +41,7 @@ class MeasurementViewController: ViewController, NVActivityIndicatorViewable {
                     if httCode == 200 {
                         //remove text
                         self.measurementTextField.text = ""
+                        self.navigationController?.popViewController(animated: true)
                         //check mark animation TODO---------
                     } else {
                         let alert = UIAlertController(title: "Error", message: "Error Uploading Measurement!", preferredStyle: UIAlertControllerStyle.alert)
@@ -50,10 +52,11 @@ class MeasurementViewController: ViewController, NVActivityIndicatorViewable {
                 
             })
         }
-        
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        measurementTextField.becomeFirstResponder()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -56,10 +56,6 @@ class LoginViewController: ViewController, UITextFieldDelegate, NVActivityIndica
         }
     }
     
-    @IBAction func unwindToLogin(sender: UIStoryboardSegue)
-    {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +66,14 @@ class LoginViewController: ViewController, UITextFieldDelegate, NVActivityIndica
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     func registerForKeyboardNotifications(){

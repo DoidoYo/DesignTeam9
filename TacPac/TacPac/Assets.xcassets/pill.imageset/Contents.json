@@ -6,7 +6,7 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "icon-pillx3.png",
+      "filename" : "004-tablet-and-pill.png",
       "scale" : "2x"
     },
     {
@@ -17,5 +17,8 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
   }
 }
