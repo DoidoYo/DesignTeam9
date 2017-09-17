@@ -82,6 +82,8 @@ namespace TacPac_WebApp.Controllers
         [Route("sendEmail")]
         public string sendEmail([FromBody]string recepients)
         {
+            //email-smtp.us-west-2.amazonaws.com
+            //email-smtp.us-west-2.amazonaws.com
             //var client = new SmtpClient("smtp.gmail.com", 587)
             //{
             //    Credentials = new NetworkCredential("gabrielblfernandes@gmail.com", "doctorG123!"),

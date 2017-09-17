@@ -11,48 +11,57 @@ import UIKit
 
 class SignupViewController: ViewController, UITextFieldDelegate {
     
+    //connects email textfield to variable
     @IBOutlet weak var emailTextField: UITextField!
+    //connects password textfield to variable
     @IBOutlet weak var passwordTextField: UITextField!
+    //connects first name textfield to variable
     @IBOutlet weak var firstnameTextField: UITextField!
+    //connects last name textfield to variable
     @IBOutlet weak var lastnameTextField: UITextField!
+    //connects birthday textfield to variable
     @IBOutlet weak var birthdayTextField: UITextField!
-    
+    //connects scroll view textfield to variable
     @IBOutlet weak var scrollView: UIScrollView!
+    //connects active textfield to variable
+    @IBOutlet weak var codeTextField: UITextField!
     var activeField: UITextField?
     
+    //custom select picler for dates
     @IBAction func birthdayStartEditing(_ sender: UITextField) {
+        //creates date picker
         let datePickerView:UIDatePicker = UIDatePicker()
         
         datePickerView.datePickerMode = UIDatePickerMode.date
         
         sender.inputView = datePickerView
-        
+        //shows date picker
         datePickerView.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
         
     }
     
-    
+    //sign up button pressed
     @IBAction func signupButton(_ sender: Any) {
-        TacPacServer.signup(username: emailTextField.text!, password: passwordTextField.text!, firstName: firstnameTextField.text!, lastName: lastnameTextField.text!, birthday: birthdayTextField.text!, completion: {
-            httpCode, msg in
-            
-            DispatchQueue.main.async {
-                let alert = UIAlertController(title: "Error", message: msg, preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
-            
-        })
+        
+        let model = SignupModel()
+        model.email = emailTextField.text!
+        model.password = passwordTextField.text!
+        model.firstName = firstnameTextField.text!
+        model.lastName = lastnameTextField.text!
+        model.dob = birthdayTextField.text!
+        model.code = codeTextField.text!
+        
+        FirebaseHelper.signup(model)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //hide keyboard when textfield is not tapped
         self.hideKeyboardWhenTappedAround()
-        
+        //registers tap action
         registerForKeyboardNotifications()
         
-        
+        //set delegates
         emailTextField.delegate = self
         passwordTextField.delegate = self
         firstnameTextField.delegate = self
@@ -61,6 +70,7 @@ class SignupViewController: ViewController, UITextFieldDelegate {
     }
     
     func datePickerValueChanged(sender:UIDatePicker) {
+        //creates date formatted for registering user
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
@@ -110,21 +120,24 @@ class SignupViewController: ViewController, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField){
+        //keeps track of selected text field
         activeField = textField
     }
     
     func textFieldDidEndEditing(_ textField: UITextField){
+        //removes selected text field
         activeField = nil
     }
     
 }
 
 extension UIViewController {
+    // hide keybaord function
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
-    
+    //same as above
     func dismissKeyboard() {
         view.endEditing(true)
     }

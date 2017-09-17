@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A646FF09BC17E5145D880E4 /* Pods_TacPac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA7CBA852A6B78FEC3CAF85 /* Pods_TacPac.framework */; };
 		7D4CCD4EBBC53B262EDEE0D0 /* Pods_TacPacTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9253DBA2318335E773C71ED3 /* Pods_TacPacTests.framework */; };
+		BD0672531F6DA1B70092E4C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD0672521F6DA1B70092E4C0 /* GoogleService-Info.plist */; };
 		BD07524C1E71C8D800C616CB /* MeasurementScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07524B1E71C8D800C616CB /* MeasurementScreenController.swift */; };
 		BD07524E1E71C9A000C616CB /* TacPacModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07524D1E71C9A000C616CB /* TacPacModels.swift */; };
 		BD21849B1E57BAFB00E0FF61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21849A1E57BAFB00E0FF61 /* AppDelegate.swift */; };
@@ -26,6 +27,9 @@
 		BD922F0B1E78DC8B00084A90 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD922F071E78DC8B00084A90 /* CustomTabBarItem.swift */; };
 		BDA9B5581E86212100CA5E32 /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9B5571E86212100CA5E32 /* ExportViewController.swift */; };
 		BDABE59C1E60FB2F00499D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDABE59B1E60FB2F00499D19 /* Assets.xcassets */; };
+		BDB2557F1F6DA5E500D84FB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB2557E1F6DA5E500D84FB1 /* Assets.xcassets */; };
+		BDB255811F6DA82D00D84FB1 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB255801F6DA82D00D84FB1 /* FirebaseHelper.swift */; };
+		BDB255831F6DA8C600D84FB1 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB255821F6DA8C600D84FB1 /* SignupModel.swift */; };
 		BDD790331E5E1404005263FB /* TacPacServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD790321E5E1404005263FB /* TacPacServer.swift */; };
 		BDD790371E5E27B0005263FB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD790361E5E27B0005263FB /* SignupViewController.swift */; };
 		BDD790391E5E2AC0005263FB /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD790381E5E2AC0005263FB /* TempViewController.swift */; };
@@ -57,6 +61,7 @@
 		7242FA486FD4F9A3CA5BAF6D /* Pods-TacPacUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TacPacUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TacPacUITests/Pods-TacPacUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9253DBA2318335E773C71ED3 /* Pods_TacPacTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TacPacTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3FB5597229BDF134484026A /* Pods_TacPacUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TacPacUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0672521F6DA1B70092E4C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD07524B1E71C8D800C616CB /* MeasurementScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementScreenController.swift; sourceTree = "<group>"; };
 		BD07524D1E71C9A000C616CB /* TacPacModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TacPacModels.swift; sourceTree = "<group>"; };
 		BD2184971E57BAFB00E0FF61 /* TacPac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TacPac.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +85,9 @@
 		BD922F071E78DC8B00084A90 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
 		BDA9B5571E86212100CA5E32 /* ExportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
 		BDABE59B1E60FB2F00499D19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDB2557E1F6DA5E500D84FB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDB255801F6DA82D00D84FB1 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		BDB255821F6DA8C600D84FB1 /* SignupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		BDD790321E5E1404005263FB /* TacPacServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TacPacServer.swift; sourceTree = "<group>"; };
 		BDD790361E5E27B0005263FB /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		BDD790381E5E2AC0005263FB /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +160,8 @@
 		BD2184991E57BAFB00E0FF61 /* TacPac */ = {
 			isa = PBXGroup;
 			children = (
+				BD0672521F6DA1B70092E4C0 /* GoogleService-Info.plist */,
+				BDB2557E1F6DA5E500D84FB1 /* Assets.xcassets */,
 				BD922F031E78DC7900084A90 /* Custom */,
 				BDD790311E5E13E1005263FB /* Controller */,
 				BDD7902F1E5E13D6005263FB /* Model */,
@@ -192,6 +202,7 @@
 				BD922F061E78DC8B00084A90 /* CustomTabBarController.swift */,
 				BD922F071E78DC8B00084A90 /* CustomTabBarItem.swift */,
 				BD4DBD9B1E8EE46400DB5BB0 /* UnderlinedTextField.swift */,
+				BDB255801F6DA82D00D84FB1 /* FirebaseHelper.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 			children = (
 				BDD790321E5E1404005263FB /* TacPacServer.swift */,
 				BD07524D1E71C9A000C616CB /* TacPacModels.swift */,
+				BDB255821F6DA8C600D84FB1 /* SignupModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -351,8 +363,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2184A81E57BAFB00E0FF61 /* LaunchScreen.storyboard in Resources */,
+				BD0672531F6DA1B70092E4C0 /* GoogleService-Info.plist in Resources */,
 				BDABE59C1E60FB2F00499D19 /* Assets.xcassets in Resources */,
 				BD2184A01E57BAFB00E0FF61 /* Main.storyboard in Resources */,
+				BDB2557F1F6DA5E500D84FB1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +531,7 @@
 			files = (
 				BDD790371E5E27B0005263FB /* SignupViewController.swift in Sources */,
 				BD07524E1E71C9A000C616CB /* TacPacModels.swift in Sources */,
+				BDB255811F6DA82D00D84FB1 /* FirebaseHelper.swift in Sources */,
 				BDD790331E5E1404005263FB /* TacPacServer.swift in Sources */,
 				BD3CF43F1E71D743009512D8 /* HistoryViewController.swift in Sources */,
 				BD922F091E78DC8B00084A90 /* CustomTabBar.swift in Sources */,
@@ -527,6 +542,7 @@
 				BD922F081E78DC8B00084A90 /* CustomTabAnimatedTransitioning.swift in Sources */,
 				BD922F0B1E78DC8B00084A90 /* CustomTabBarItem.swift in Sources */,
 				BD21849D1E57BAFB00E0FF61 /* ViewController.swift in Sources */,
+				BDB255831F6DA8C600D84FB1 /* SignupModel.swift in Sources */,
 				BD922F0A1E78DC8B00084A90 /* CustomTabBarController.swift in Sources */,
 				BD21849B1E57BAFB00E0FF61 /* AppDelegate.swift in Sources */,
 				BD2184A31E57BAFB00E0FF61 /* TacPac.xcdatamodeld in Sources */,

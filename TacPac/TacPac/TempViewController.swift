@@ -13,6 +13,7 @@ class TempViewController: ViewController {
     
     
     @IBAction func logout(_ sender: Any) {
+        //removes token from memory
         KeychainWrapper.standard.remove(key: "token")
 
         //instantiate controller

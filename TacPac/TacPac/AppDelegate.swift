@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import SwiftKeychainWrapper
+import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,37 +20,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        FirebaseApp.configure()
+        
+        
+        IQKeyboardManager.sharedManager().enable = true
+        
+        //instantiate controller
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let vs = story.instantiateViewController(withIdentifier: "LoginScreen")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = vs
+        
         //get token if it exists
-        if TacPacServer.token == nil {
-            if let token = KeychainWrapper.standard.string(forKey: "token") {
-                
-                //set information
-                TacPacServer.token = token
-                
-                TacPacServer.checkToken(completion: {
-                    live in
-                    
-                    if (!live) {
-                        //instantiate controller
-                        let story = UIStoryboard(name: "Main", bundle: nil)
-                        let vs = story.instantiateViewController(withIdentifier: "LoginScreen")
-                        
-                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                        appDelegate.window?.rootViewController = vs
-                    }
-                    
-                })
-                
-                
-            } else {
-                //instantiate controller
-                let story = UIStoryboard(name: "Main", bundle: nil)
-                let vs = story.instantiateViewController(withIdentifier: "LoginScreen")
-                
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = vs
-            }
-        }
+//        if TacPacServer.token == nil {
+//            if let token = KeychainWrapper.standard.string(forKey: "token") {
+//                
+//                //set information
+//                TacPacServer.token = token
+//                
+//                TacPacServer.checkToken(completion: {
+//                    live in
+//                    
+//                    if (!live) {
+//                        //instantiate controller
+//                        let story = UIStoryboard(name: "Main", bundle: nil)
+//                        let vs = story.instantiateViewController(withIdentifier: "LoginScreen")
+//                        
+//                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                        appDelegate.window?.rootViewController = vs
+//                    }
+//                    
+//                })
+//                
+//                
+//            } else {
+//                //instantiate controller
+//                let story = UIStoryboard(name: "Main", bundle: nil)
+//                let vs = story.instantiateViewController(withIdentifier: "LoginScreen")
+//                
+//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                appDelegate.window?.rootViewController = vs
+//            }
+//        }
         
         
         

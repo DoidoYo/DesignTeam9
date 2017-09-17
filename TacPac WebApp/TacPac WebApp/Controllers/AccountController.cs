@@ -26,17 +26,13 @@ namespace TacPac_WebApp.Controllers
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
 
-        public AccountController()
-        {
-        }
-
         public AccountController(ApplicationUserManager userManager,
             ISecureDataFormat<AuthenticationTicket> accessTokenFormat)
         {
             UserManager = userManager;
             AccessTokenFormat = accessTokenFormat;
         }
-
+        //instantiates usermanager
         public ApplicationUserManager UserManager
         {
             get
@@ -48,7 +44,7 @@ namespace TacPac_WebApp.Controllers
                 _userManager = value;
             }
         }
-
+        //sets the token format
         public ISecureDataFormat<AuthenticationTicket> AccessTokenFormat { get; private set; }
 
         // GET api/Account/UserInfo
@@ -66,7 +62,7 @@ namespace TacPac_WebApp.Controllers
                 Birthday = user.Birthday
             };
         }
-
+        //checks token validity
         [Route("checkToken")]
         public bool checkToken()
         {
@@ -85,6 +81,7 @@ namespace TacPac_WebApp.Controllers
         [Route("ManageInfo")]
         public async Task<ManageInfoViewModel> GetManageInfo(string returnUrl, bool generateState = false)
         {
+            //gets user
             IdentityUser user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
 
             if (user == null)
@@ -93,7 +90,7 @@ namespace TacPac_WebApp.Controllers
             }
 
             List<UserLoginInfoViewModel> logins = new List<UserLoginInfoViewModel>();
-
+            //adds login form to user
             foreach (IdentityUserLogin linkedAccount in user.Logins)
             {
                 logins.Add(new UserLoginInfoViewModel

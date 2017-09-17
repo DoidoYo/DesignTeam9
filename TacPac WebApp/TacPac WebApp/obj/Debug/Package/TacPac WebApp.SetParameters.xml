@@ -2,4 +2,5 @@
 <parameters>
   <setParameter name="IIS Web Application Name" value="Default Web Site/" />
   <setParameter name="DefaultConnection-Web.config Connection String" value="Server=aab9ah8g58f5zj.cp5jns0540in.us-west-2.rds.amazonaws.com;Uid=root;Pwd=password;Database=tacpacdb;" />
+  <setParameter name="GroupmeConnection-Web.config Connection String" value="Server=aab9ah8g58f5zj.cp5jns0540in.us-west-2.rds.amazonaws.com;Uid=root;Pwd=password;Database=groupme;" />
 </parameters>

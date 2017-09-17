@@ -8,6 +8,19 @@
 
 import Foundation
 
+//model for data transfer to and from server, represents a measurement
+
+class Reading :JSONSerializable, Equatable {
+    var concentration:Double!
+    var time: String!
+    
+    static func ==(lhs: Reading, rhs: Reading) -> Bool {
+        if lhs.time == rhs.time {
+            return true
+        }
+        return false
+    }
+}
 class TacMeasurement : JSONSerializable, Equatable {
     
     var id: Int?
@@ -22,14 +35,14 @@ class TacMeasurement : JSONSerializable, Equatable {
     static func ==(lhs: TacMeasurement, rhs: TacMeasurement) -> Bool {
         if let lid = lhs.id, let rid = rhs.id {
             if lid == rid {
-               return true
+                return true
             }
         }
         return false
     }
 }
 
-
+//code that automatically creates JSON from swift object
 protocol JSONRepresentable {
     var JSONRepresentation: AnyObject { get }
 }

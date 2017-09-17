@@ -16,7 +16,7 @@ namespace TacPac_WebApp.Controllers
     {
         ConsoleModel console = new ConsoleModel();
 
-        static string BOT_ID = "cc65881e13e1ad55e34ec4f403";
+        static string BOT_ID = "69b893406d1ea46bd756d158f2";
         static string GROUPME_URL = "https://api.groupme.com/v3/bots/post";
 
         // GET: Groupme
@@ -110,8 +110,11 @@ namespace TacPac_WebApp.Controllers
                         phi.Name = groupme.text.Substring(mentionsAttach.loci[i][0]+1, mentionsAttach.loci[i][1]-1);
 
                         msg += phi.Name + " Registered!\n";
-                            
-                        db.phikeia.Add(phi);
+
+                            if (!phi.Name.Contains("abriel"))
+                            {
+                                db.phikeia.Add(phi);
+                            }
                             
                        
 
@@ -191,6 +194,9 @@ namespace TacPac_WebApp.Controllers
                     }
 
                 db.SaveChanges();
+            }
+            if (groupme.text.Contains("Andre Re")) {
+                sendMsg("Andre you a bitch");
             }
             //ConsoleModel.log.Add("---------------");
             //ConsoleModel.log.Add(groupme.text);

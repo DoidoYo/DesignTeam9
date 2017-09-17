@@ -3,4 +3,7 @@
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=aab9ah8g58f5zj.cp5jns0540in.us-west-2.rds.amazonaws.com;Uid=root;Pwd=password;Database=tacpacdb;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="\\\\Mac\\Home\\Documents\\Git\\DesignTeam9\\TacPac\ WebApp\\TacPac\ WebApp\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
+  <parameter name="GroupmeConnection-Web.config Connection String" description="GroupmeConnection Connection String used in web.config by the application to access the database." defaultValue="Server=aab9ah8g58f5zj.cp5jns0540in.us-west-2.rds.amazonaws.com;Uid=root;Pwd=password;Database=groupme;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="\\\\Mac\\Home\\Documents\\Git\\DesignTeam9\\TacPac\ WebApp\\TacPac\ WebApp\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GroupmeConnection']/@connectionString" />
+  </parameter>
 </parameters>
